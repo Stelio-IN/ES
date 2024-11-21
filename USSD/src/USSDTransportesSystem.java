@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 
-public class USSDHospitalSystem extends JFrame {
+public class USSDTransportesSystem extends JFrame {
 
     private JTextArea display;
     private JTextField inputField;
@@ -12,7 +12,7 @@ public class USSDHospitalSystem extends JFrame {
     private String currentMenu = "main";
     private HashMap<String, String> patientData = new HashMap<>();
 
-    public USSDHospitalSystem() {
+    public USSDTransportesSystem() {
       
         
         // Configuração da janela simulando um celular
@@ -205,7 +205,7 @@ public class USSDHospitalSystem extends JFrame {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            USSDHospitalSystem frame = new USSDHospitalSystem();
+            USSDTransportesSystem frame = new USSDTransportesSystem();
             frame.setVisible(true);
         });
     }
