@@ -160,10 +160,10 @@ private void setupUI() {
             currentMenu = "pagamento";
             display.setText("Confirmação de Pagamento:\n" +
                             "Horário: " + selectedTrip + "\n" +
-                            "Preço: 750.0 MZN\n" +
-                            "Pressione:"
-                                    + " 1 para pagar"
-                                    + ",0 para voltar.");
+                            "Preço: 950.0 MZN\n" +
+                            "Pressione: \n"
+                                    + "1 - pagar \n"
+                                    + "0 - voltar. \n");
         }
          private void handleOrigemMenu(String input) {
             switch (input) {
