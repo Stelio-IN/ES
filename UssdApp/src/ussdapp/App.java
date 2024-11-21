@@ -1,3 +1,5 @@
+package ussdapp;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -5,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.Random;
 
-public class USSDTransportesSystem extends JFrame {
+public class App extends JFrame {
 
     private JTextArea display;
     private JTextField inputField;
@@ -16,7 +18,7 @@ public class USSDTransportesSystem extends JFrame {
     private String selectedDestination = "";
     private String selectedTrip = "";
 
-    public USSDTransportesSystem() {
+    public App() {
         // Window configuration simulating a mobile phone
         setTitle("USSD - Compra de Bilhetes de Transporte");
         setSize(350, 600);
@@ -32,7 +34,7 @@ public class USSDTransportesSystem extends JFrame {
         display.setEditable(false);
         display.setFont(new Font("Monospaced", Font.PLAIN, 14));
         display.setMargin(new Insets(10, 10, 10, 10));
-        display.setText("Bem-vindo ao Sistema de Compra de Bilhetes!\n" +
+        display.setText("Pag Express Moz!\n" +
                         "1) Comprar bilhete\n" +
                         "2) Consultar horários\n" +
                         "3) Ver bilhetes comprados\n" +
@@ -97,12 +99,14 @@ public class USSDTransportesSystem extends JFrame {
                                 "0) Voltar\n");
                 break;
             case "2":
-                display.setText("Consulta de Horários (Funcionalidade em desenvolvimento)\n" +
+                display.setText("Consulta de Horários \n" +
+                                "Funcionalidade em desenvolvimento\n"+
                                 "Pressione qualquer tecla para voltar.\n");
                 currentMenu = "main";
                 break;
             case "3":
-                display.setText("Bilhetes Comprados (Funcionalidade em desenvolvimento)\n" +
+                display.setText("Bilhetes Comprados \n" +
+                                  "Funcionalidade em desenvolvimento\n"+
                                 "Pressione qualquer tecla para voltar.\n");
                 currentMenu = "main";
                 break;
@@ -274,9 +278,9 @@ public class USSDTransportesSystem extends JFrame {
             case "0":
                 currentMenu = "viagens";
                 display.setText("Selecione a viagem:\n" +
-                                "1) X Data: 21/10/2024, Horário: 08:00\n" +
-                                "2) Y Data: 19/10/2024, Horário: 15:00\n" +
-                                "3) Z Data: 18/10/2024, Horário: 13:00\n" +
+                                "1) Lagoon Data: 21/10/2024, Horário: 08:00\n" +
+                                "2) MozCab Data: 19/10/2024, Horário: 15:00\n" +
+                                "3) Mango Data: 18/10/2024, Horário: 13:00\n" +
                                 "0) Voltar\n");
                 break;
             default:
@@ -328,7 +332,7 @@ public class USSDTransportesSystem extends JFrame {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            USSDTransportesSystem frame = new USSDTransportesSystem();
+            App frame = new App();
             frame.setVisible(true);
         });
     }

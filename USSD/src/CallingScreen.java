@@ -25,10 +25,11 @@ public class CallingScreen extends Screen {
         display.setFont(new Font("Monospaced", Font.PLAIN, 14));
         display.setMargin(new Insets(10, 10, 10, 10));
         display.setText("Pag express MOZ!\n" +
-                        "1. Marcar Consulta\n" +
-                        "2. Ver Hospitais Próximos\n" +
-                        "3. Cadastro de Paciente\n" +
-                        "4. Sair\n");
+                        "1. Comprar Bilhete\n" +
+                        "2. Consultar horarios\n" +
+                        "3. Ver Bilhetes Comprados\n" +
+                        "4. Ajuda\n" +
+                        "5. Sair\n");
         JScrollPane scrollPane = new JScrollPane(display);  // Adicionando a área de exibição em um JScrollPane
 
         // Campo de entrada para o usuário
@@ -92,12 +93,12 @@ public class CallingScreen extends Screen {
         switch (input) {
             case "1":
                 currentMenu = "marcarConsulta";
-                display.setText("Marcar Consulta:\n" +
-                                "Escolha a especialidade:\n" +
-                                "1. Clínica Geral\n" +
-                                "2. Pediatria\n" +
-                                "3. Cardiologia\n" +
-                                "4. Voltar\n");
+                display.setText("Escolher a Origem:\n" +
+                                "1. Maputo:\n" +
+                                "2. Gaza\n" +
+                                "3. Inhambane\n" +
+                                "4. Mostrar mais\n" +
+                                "5. Voltar\n");
                 break;
             case "2":
                 currentMenu = "hospitaisProximos";
@@ -107,7 +108,7 @@ public class CallingScreen extends Screen {
                 currentMenu = "cadastroPacienteNome";
                 display.setText("Cadastro de Paciente:\nDigite o nome completo:\n");
                 break;
-            case "4":
+            case "5":
                 currentMenu = "confirmarSaida";
                 display.setText("Tem certeza que deseja sair?\n1. Sim\n2. Não\n");
                 break;
@@ -121,12 +122,12 @@ public class CallingScreen extends Screen {
         switch (input) {
             case "1":
                 selectedService = "Clínica Geral";
-                currentMenu = "selecionarUnidade";
-                display.setText("Clínica Geral selecionada.\n" +
-                                "Unidades sanitárias com este serviço num raio de 50 km:\n" +
-                                "1. Hospital Central de Maputo (HCM)\n" +
-                                "2. Hospital Geral José Macamo\n" +
-                                "3. Hospital Provincial da Matola\n" +
+                currentMenu = "Escolher Distino";
+                display.setText("Possiveis distinos.\n" +
+                                "1. Gaza \n" +
+                                "2. Inhambane \n" +
+                                "3. Sofala \n" +
+                                "4. Mostrar mais \n" +
                                 "Escolha o hospital para prosseguir:\n");
                 break;
             case "2":
