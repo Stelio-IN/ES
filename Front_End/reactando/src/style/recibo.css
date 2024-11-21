@@ -1,0 +1,37 @@
+.frame{
+    background-color: rgb(249, 249, 249);
+    width: 400px;
+    height: 700px;
+    margin: auto;
+    margin-left: 50px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    background: #96bfb5;
+}
+
+p{
+    position: absolute;
+    color: #2f8772;
+    font-weight: 500;
+    top: 80px;
+}
+
+.recib {
+    width: 336px;
+height: 486px;
+flex-shrink: 0;
+fill: #FFF;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+background-color: rgb(255, 255, 255);
+margin: 20px;
+margin-top: 70px;
+border-radius: 20px;
+}
+
+.loc, .down{
+    width: 300px;
+    margin: 5px;
+    background: #2f8772;
+}

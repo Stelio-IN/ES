@@ -1,0 +1,26 @@
+.frame{
+    background-color: rgb(249, 249, 249);
+    width: 400px;
+    height: 700px;
+    margin: auto;
+    margin-left: 50px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    background: #96bfb5;
+    background-image: url('../assets/foto.png');
+    background-size: cover;
+}
+
+.dados{
+width: 400px;
+height: 104px;
+flex-shrink: 0;
+fill: #358989;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+background-color: #3a8380;
+position: absolute;
+bottom: 50px;
+border-radius: 20px;
+}
