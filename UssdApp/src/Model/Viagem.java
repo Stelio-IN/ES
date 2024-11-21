@@ -39,6 +39,54 @@ public class Viagem {
         }
     }
 
-    // Getters e Setters omitidos para brevidade
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getRota() {
+        return rota;
+    }
+
+    public void setRota(String rota) {
+        this.rota = rota;
+    }
+
+    public String getHorario() {
+        return horario;
+    }
+
+    public void setHorario(String horario) {
+        this.horario = horario;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public int getCapacidade() {
+        return capacidade;
+    }
+
+    public void setCapacidade(int capacidade) {
+        this.capacidade = capacidade;
+    }
+
+    public int getLugaresDisponiveis() {
+        return lugaresDisponiveis;
+    }
+
+    public void setLugaresDisponiveis(int lugaresDisponiveis) {
+        this.lugaresDisponiveis = lugaresDisponiveis;
+    }
+
+   
 }
 

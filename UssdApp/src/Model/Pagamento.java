@@ -30,6 +30,46 @@ public class Pagamento {
         return valor > 0 && (metodo.equals("M-Pesa") || metodo.equals("USSD"));
     }
 
-    // Getters e Setters omitidos para brevidade
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(String idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
+    public String getIdBilhete() {
+        return idBilhete;
+    }
+
+    public void setIdBilhete(String idBilhete) {
+        this.idBilhete = idBilhete;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public String getMetodo() {
+        return metodo;
+    }
+
+    public void setMetodo(String metodo) {
+        this.metodo = metodo;
+    }
+
+   
 }
 
