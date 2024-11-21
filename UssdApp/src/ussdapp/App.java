@@ -43,31 +43,48 @@ public class App extends JFrame {
         routeMap.put("Marracuene", List.of("Maputo", "Boane", "Matola"));
     }
 
-    private void setupUI() {
-        setTitle("Pag Express Moz - Bilhetes de Transporte");
-        setSize(400, 600);
-        setResizable(false);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+private void setupUI() {
+    // Definindo o título e a janela
+    setTitle("Pag Express Moz - Bilhetes de Transporte");
+    setSize(400, 600);
+    setResizable(false);
+    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        panel = new JPanel(new BorderLayout());
+    // Criando o painel principal com um Layout simples
+    panel = new JPanel(new BorderLayout());
+    panel.setBackground(new Color(245, 245, 245)); // Cor de fundo mais clara
 
-        display = new JTextArea();
-        display.setEditable(false);
-        display.setFont(new Font("Monospaced", Font.PLAIN, 14));
-        display.setMargin(new Insets(10, 10, 10, 10));
-        showMainMenu();
+    // Área de exibição (Texto)
+    display = new JTextArea();
+    display.setEditable(false);
+    display.setFont(new Font("Arial", Font.PLAIN, 14));
+    display.setMargin(new Insets(10, 10, 10, 10));
+    display.setBackground(new Color(255, 255, 255)); // Cor de fundo do texto
+    display.setForeground(new Color(0, 0, 0)); // Cor do texto
+    display.setLineWrap(true);
+    display.setWrapStyleWord(true); // Quebra de linha automática
+    showMainMenu();
 
-        JScrollPane scrollPane = new JScrollPane(display);
+    // Adicionando um painel de rolagem ao JTextArea
+    JScrollPane scrollPane = new JScrollPane(display);
+    scrollPane.setBorder(BorderFactory.createEmptyBorder()); // Removendo borda do JScrollPane
 
-        inputField = new JTextField();
-        inputField.setFont(new Font("Monospaced", Font.PLAIN, 14));
-        inputField.addActionListener(new InputHandler());
+    // Campo de entrada
+    inputField = new JTextField();
+    inputField.setFont(new Font("Arial", Font.PLAIN, 14));
+    inputField.setForeground(new Color(50, 50, 50)); // Cor do texto
+    inputField.setBackground(new Color(255, 255, 255)); // Cor de fundo
+    inputField.setBorder(BorderFactory.createLineBorder(new Color(200, 200, 200), 1)); // Borda sutil
+    inputField.addActionListener(new InputHandler());
 
-        panel.add(scrollPane, BorderLayout.CENTER);
-        panel.add(inputField, BorderLayout.SOUTH);
+    // Adicionando os componentes no painel principal
+    panel.add(scrollPane, BorderLayout.CENTER);
+    panel.add(inputField, BorderLayout.SOUTH);
 
-        add(panel);
-    }
+    // Adicionando o painel ao JFrame
+    add(panel);
+}
+
 
     private void showMainMenu() {
         display.setText("Pag Express Moz!\n" +
