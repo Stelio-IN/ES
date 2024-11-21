@@ -115,7 +115,7 @@ public class App extends JFrame {
                     currentMenu = "detalhes-viagem";
                     display.setText("Detalhes da Viagem:\n" +
                                    "Horário: 10:00\n" +
-                                   "Preço: 750.0 MZN\n" +
+                                   "Preço: 8500.0 MZN\n" +
                                    "Pressione qualquer tecla para continuar.");
                     break;
                 case "2":
@@ -144,7 +144,9 @@ public class App extends JFrame {
             display.setText("Confirmação de Pagamento:\n" +
                             "Horário: " + selectedTrip + "\n" +
                             "Preço: 750.0 MZN\n" +
-                            "Pressione 1 para pagar, ou 0 para voltar.");
+                            "Pressione:"
+                                    + " 1 para pagar"
+                                    + ",0 para voltar.");
         }
          private void handleOrigemMenu(String input) {
             switch (input) {
